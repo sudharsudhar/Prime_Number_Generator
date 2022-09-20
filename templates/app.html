@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLOUD PAGE</title>
+</head>
+<body>
+<h1><center>
+<form method="POST">
+    <label for="star_number">Enter The user startnumber:</label><br>
+    <input type="number" id="star_number" name="star_number"><br>
+
+    <label for="end_number">Enter The endnumber:</label><br>
+    <input type="number" id="end_number" name="end_number"><br>
+
+    <label for="algorithm">Choose a algorithm:</label>
+
+    <select name="algorithm" id="algorithm">
+        <option value="basic">Basic</option>
+        <option value="medium">Medium</option>
+        <option value="advance">Advance</option>
+    </select>
+
+  <input type="submit" value="Submit">
+
+</form>
+    </center></h1>
+
+<h2>{{messg}}</h2>
+<br>
+
+<table>
+
+{%for i in database%}
+
+ <tr>
+    <th>Sno: {{i.id}}</th>
+    <th>Start Number: {{i.star_number}}</th>
+    <th>End Number: {{i.end_number}}</th>
+    <th>Algorithm Selected: {{i.algorithm}}</th>
+    <th>Time Elapsed: {{i.time_elapse}}</th>
+  </tr>
+
+
+
+{%endfor%}
+
+</table>
+</body>
+</html>
